@@ -144,3 +144,12 @@ app.controller('RelatedController', function($scope, player) {
 // Parent scope
 app.controller('FrameController', function($scope) {
 });
+
+angular.module('myApp', []).
+config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/', {
+    controller: 'HomeController',
+    template: '<h2>We are home</h2>'
+  })
+  .otherwise({redirectTo: '/'});
+}]);
